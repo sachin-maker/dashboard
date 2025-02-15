@@ -57,7 +57,7 @@ export const getAllMessages = () => async (dispatch) => {
   dispatch(messageSlice.actions.getAllMessagesRequest());
   try {
     const response = await axios.get(
-      "https://portfolio-backend-gw7d.onrender.com/api/v1/message/getall",
+      "https://backend-pi-ochre.vercel.app/api/v1/message/getall",
       { withCredentials: true }
     );
     dispatch(
@@ -75,7 +75,7 @@ export const deleteMessage = (id) => async (dispatch) => {
   dispatch(messageSlice.actions.deleteMessageRequest());
   try {
     const response = await axios.delete(
-      `https://portfolio-backend-gw7d.onrender.com/api/v1/message/delete/${id}`,
+      `https://backend-pi-ochre.vercel.app/api/v1/message/delete/${id}`,
       {
         withCredentials: true,
       }
